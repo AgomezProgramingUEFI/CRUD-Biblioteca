@@ -8,14 +8,14 @@ void deleteBook(List<Map<String, dynamic>> books) {
     return;
   }
 
-  print("Ingrese el índice del libro a eliminar (1-${books.length}): ");
-  int indexBook = int.parse(stdin.readLineSync()!);
+  print("Ingrese el número del libro a eliminar (1-${books.length}): ");
+  
+  int indexBook = int.parse(stdin.readLineSync()!) - 1;
 
-  if(0 <= indexBook && indexBook < books.length) {
+  if (0 <= indexBook && indexBook < books.length) {
     books.removeAt(indexBook);
     print("Libro eliminado con éxito.");
   } else {
-    print("Índice de libro inválido.");
+    print("Número de libro inválido.");
   }
-  
 }
