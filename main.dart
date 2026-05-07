@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:convert';
 import 'add_book.dart';
 import 'list_books.dart';
+import 'delete_book.dart';
 import 'search_book.dart'; 
 
 void main() {
@@ -40,7 +41,7 @@ void main() {
         break;
 
       case '5':
-        print('\nFunción pendiente.');
+        deleteBook(books);
         break;
 
       case '6':
