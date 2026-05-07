@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:convert';
 import 'add_book.dart';
 import 'list_books.dart';
+import 'search_book.dart'; 
 
 void main() {
   stdout.encoding = utf8;
@@ -31,7 +32,7 @@ void main() {
         break;
 
       case '3':
-        print('\nFunción pendiente.');
+        searchBook(books);
         break;
 
       case '4':
