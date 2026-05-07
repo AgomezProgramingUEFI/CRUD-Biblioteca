@@ -12,26 +12,30 @@ void updateBook(List<Map<String, dynamic>> books) {
     print('${i + 1}. ${books[i]['titulo']}');
   }
 
-  print("Seleccione el número del libro a actualizar:({1}-${books.length}) ");
-  int index = int.parse(stdin.readLineSync()!);
+  print("Seleccione el número del libro a actualizar: (1-${books.length})");
 
-  print('Nuevo título del libro: ');
-  String title = stdin.readLineSync()!;
+  int index = int.parse(stdin.readLineSync()!) - 1;
 
-  print('Nuevo autor: ');
-  String author = stdin.readLineSync()!;
+  if (index >= 0 && index < books.length) {
 
-  print('Nuevo año de publicación: ');
-  int year = int.parse(stdin.readLineSync()!);
+    print('Nuevo título del libro: ');
+    String title = stdin.readLineSync()!;
 
-  switch (index >= 0 && index < books.length) {
-    case true:
-      books[index] = {'titulo': title, 'autor': author, 'year': year};
+    print('Nuevo autor: ');
+    String author = stdin.readLineSync()!;
 
-      print('\nLibro actualizado correctamente.');
-      break;
+    print('Nuevo año de publicación: ');
+    int year = int.parse(stdin.readLineSync()!);
 
-    default:
-      print('Índice inválido.');
+    books[index] = {
+      'titulo': title,
+      'autor': author,
+      'year': year
+    };
+
+    print('\nLibro actualizado correctamente.');
+
+  } else {
+    print('Número inválido.');
   }
 }
