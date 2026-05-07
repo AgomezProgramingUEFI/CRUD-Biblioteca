@@ -35,7 +35,7 @@ void main() {
         break;
 
       case '3':
-        print('\nFunción pendiente.');
+        searchBook(books);
         break;
 
       case '4':
