@@ -2,6 +2,8 @@ import 'dart:io';
 import 'dart:convert';
 import 'add_book.dart';
 import 'list_books.dart';
+import 'update.dart';
+import 'exit.dart';
 import 'delete_book.dart';
 import 'search_book.dart'; 
 
@@ -33,11 +35,11 @@ void main() {
         break;
 
       case '3':
-        searchBook(books);
+        print('\nFunción pendiente.');
         break;
 
       case '4':
-        print('\nFunción pendiente.');
+        updateBook(books);
         break;
 
       case '5':
@@ -45,7 +47,7 @@ void main() {
         break;
 
       case '6':
-        print('\nSaliendo de la aplicación...');
+        exit(books);
         running = false;
         break;
 
